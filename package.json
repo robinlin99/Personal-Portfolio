@@ -1,5 +1,5 @@
 {
-  "name": "devportfolio-template",
+  "name": "devportfolio",
   "version": "1.1.3",
   "description": "",
   "main": "js/scripts.js",
@@ -14,7 +14,7 @@
     "coding",
     "dev"
   ],
-  "author": "Ryan Fitzgerald",
+  "author": "Robin Lin",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^4.0.0",
