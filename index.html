@@ -22,7 +22,7 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="typeWriter()">
     <div id="mobile-menu-open" class="shadow-large">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
@@ -51,13 +51,30 @@
     </header>
     <!-- End header -->
 
+    <script>
+        var i = 0;
+        var txt = "Incoming SWE Intern @ Aurora";
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("current").innerHTML += txt[i]
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    </script>
+
+
+
     <div id="lead">
         <div id="lead-content">
             <h1>Robin Lin</h1>
             <br>
             <!-- https://www.cornell.edu/ -->
             <h2>Electrical and Computer Engineering Student @ <a href="https://www.cornell.edu/" style="color:#cbe7f2">Cornell University</a></h2>
-            <h2>Software Engineer</h2>
+            <!-- Rendered Text -->
+            <h2 id="current"></h2>
             <br>
             <a href="https://www.linkedin.com/in/robin-lin/" class="btn-rounded-white">Linkedin Profile</a>
             <br>
