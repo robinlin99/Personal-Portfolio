@@ -345,7 +345,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../images/gates.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -835,6 +835,24 @@ footer {
     ----- 12. Media Queries -----
     -----------------------------
 */
+
+// Keep the headline readable when the typewriter line no longer fits.
+@media only screen and (max-width: 1200px) {
+    #lead-content {
+        width: 100%;
+        max-width: calc(100vw - 30px);
+
+        .typewriter h2 {
+            white-space: normal;
+            animation: none;
+            border-right: 0;
+
+            a {
+                padding: 0;
+            }
+        }
+    }
+}
 
 // Collapse timeline
 @media only screen and (max-width: 750px) {
