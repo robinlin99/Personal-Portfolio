@@ -4,6 +4,7 @@
   "description": "",
   "main": "js/scripts.js",
   "scripts": {
+    "test": "node --test",
     "watch": "gulp watch"
   },
   "keywords": [

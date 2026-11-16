@@ -189,6 +189,25 @@ header {
     }
 }
 
+#theme-toggle {
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: $base-color;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover, &[aria-pressed="true"] {
+        background: #eee;
+    }
+
+    &:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 2px;
+    }
+}
+
 #menu {
     &.active {
         display: block;
@@ -835,6 +854,109 @@ footer {
     ----- 12. Media Queries -----
     -----------------------------
 */
+
+// Dark theme overrides keep the original light palette unchanged.
+:root {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+
+    body {
+        background: #121820;
+        color: #c4cdd7;
+    }
+
+    a {
+        color: #74c0f4;
+
+        &:hover, &:focus {
+            color: #a8d9fa;
+        }
+    }
+
+    header ul, #mobile-menu-open, #mobile-menu-close,
+    .vtimeline-content, .education-block, .project, .optional-section-block {
+        background: #1c2531;
+    }
+
+    header a, #theme-toggle, #mobile-menu-open, #mobile-menu-close {
+        color: #74c0f4;
+    }
+
+    header a:hover, #theme-toggle:hover, #theme-toggle[aria-pressed="true"] {
+        background: #2c394a;
+    }
+
+    .background-alt {
+        background: #161e28;
+    }
+
+    #about, #experience, #education, #projects, .optional-section,
+    .vtimeline-content, .education-block, .optional-section-block {
+        border-color: #3c4b5e;
+    }
+
+    #about h2, #experience h2, #education h2, #projects h2, #skills h2,
+    .vtimeline-content h3, .education-block h3, .project-info h3,
+    .optional-section h2, .optional-section-block h3, .vtimeline-date {
+        color: #edf2f7;
+    }
+
+    #about p, .vtimeline-content h4, .vtimeline-content p,
+    .education-block span, .education-block h4, .education-block p,
+    .education-block ul, .project-info p, .optional-section-block h4,
+    .optional-section-block p, .optional-section-block ul,
+    .copyright p, .top i, .social a {
+        color: #c4cdd7;
+    }
+
+    .top span {
+        border-color: #c4cdd7;
+    }
+
+    #skills li {
+        background: #2c394a;
+        color: #edf2f7;
+    }
+
+    #lead-overlay {
+        background: rgba(#0d1b2a, 0.9);
+    }
+
+    #lead-content h2 {
+        color: #b8def8;
+    }
+
+    .btn-rounded-white {
+        color: #fff;
+
+        &:hover, &:focus {
+            color: #1c2531;
+        }
+    }
+
+    #contact {
+        background: #192f44;
+    }
+
+    #contact-form {
+        input, textarea {
+            background: #101f2e;
+
+            &:focus {
+                background: #0b1621;
+                outline: 2px solid #74c0f4;
+            }
+        }
+
+        button {
+            background: #273e54;
+            color: #edf2f7;
+        }
+    }
+}
 
 // Keep the headline readable when the typewriter line no longer fits.
 @media only screen and (max-width: 1200px) {
